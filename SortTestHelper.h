@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <cassert>
+#include <iomanip>
 //#include <ctime>
 using namespace std;
 
@@ -21,6 +22,21 @@ namespace SortTestHelper{
         srand(time(NULL));
         for(int i = 0;i < n;i++)
             arr[i] = rand() % (rangeR - rangeL + 1) + rangeL;
+        return arr;
+    }
+    //创建一个近乎有序的数组
+    int* generateNearlyOrderedArray(int n,int swapTimes){
+        int *arr = new int[n];
+        for(int i = 0;i < n;i++){
+            arr[i] = i;
+        }
+        //设置随机种子
+        srand(time(NULL));
+        for(int i = 0;i < swapTimes;i++){
+            int posx = rand()%n;
+            int posy = rand()%n;
+            swap(arr[posx],arr[posy]);
+        }
         return arr;
     }
 
@@ -47,7 +63,7 @@ namespace SortTestHelper{
 
         //判断是否排序
         assert(isSorted(arr,n));
-        cout<<sortName<<" : "<<double(endTime - startTime)/CLOCKS_PER_SEC<<"s"<<endl;
+        cout<<sortName<<" : "<<setiosflags(ios::fixed)<<setprecision(5)<<double(endTime - startTime)/CLOCKS_PER_SEC<<"s"<<endl;
         return ;
     }
 
