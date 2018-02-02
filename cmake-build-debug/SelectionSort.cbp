@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/d/users/wangzy/ClionProjects/SelectionSort/InsertionSort.h">
+			<Option target="SelectionSort"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/users/wangzy/ClionProjects/SelectionSort/SelectionSort.h">
+			<Option target="SelectionSort"/>
+		</Unit>
 		<Unit filename="/cygdrive/d/users/wangzy/ClionProjects/SelectionSort/SortTestHelper.h">
 			<Option target="SelectionSort"/>
 		</Unit>

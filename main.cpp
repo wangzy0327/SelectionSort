@@ -2,22 +2,13 @@
 #include <string>
 //#include <algorithm>
 #include "SortTestHelper.h"
+#include "SelectionSort.h"
+#include "InsertionSort.h"
 #include "Student.h"
 
 using namespace std;
 
-template <typename T>
-void selectionSort(T arr[],int n){
-    for(int i = 0;i < n;i++){
-        //寻找[i,n)区间中的最小值
-        int minIndex = i;
-        for(int j = i + 1;j < n;j++)
-            if(arr[j] < arr[minIndex])
-                minIndex = j;
-        //swap 在iostream中  algorithm中也有
-        swap(arr[i],arr[minIndex]);
-    }
-}
+
 //    int a[10] = {2,3,1,4,10,5,7,8,9,6};
 //    selectionSort(a,10);
 //    for(int i = 0;i < 10;i++)
@@ -48,13 +39,17 @@ void selectionSort(T arr[],int n){
 int main() {
     int n = 10000;
     int *arr = SortTestHelper::generateRandomArray(n,0,n);
+    int *arr2 = SortTestHelper::copyIntArray(arr,n);
 //    selectionSort(arr,n);
     //将打印提炼为一个函数
 //    SortTestHelper::printArray(arr,n);
     SortTestHelper::testSort("Selection Sort",selectionSort,arr,n);
+    SortTestHelper::testSort("Insertion Sort",insertionSort,arr2,n);
 
     //释放内存
     delete[] arr;
+
+    delete[] arr2;
 
     return 0;
 }

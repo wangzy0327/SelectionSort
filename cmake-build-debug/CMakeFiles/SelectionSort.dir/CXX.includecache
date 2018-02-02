@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/d/users/wangzy/ClionProjects/SelectionSort/InsertionSort.h
+iostream
+-
+algorithm
+-
+
+/cygdrive/d/users/wangzy/ClionProjects/SelectionSort/SelectionSort.h
+iostream
+-
+string
+-
+
 /cygdrive/d/users/wangzy/ClionProjects/SelectionSort/SortTestHelper.h
 iostream
 -
@@ -25,6 +37,10 @@ string
 -
 SortTestHelper.h
 /cygdrive/d/users/wangzy/ClionProjects/SelectionSort/SortTestHelper.h
+SelectionSort.h
+/cygdrive/d/users/wangzy/ClionProjects/SelectionSort/SelectionSort.h
+InsertionSort.h
+/cygdrive/d/users/wangzy/ClionProjects/SelectionSort/InsertionSort.h
 Student.h
 /cygdrive/d/users/wangzy/ClionProjects/SelectionSort/Student.h
 
