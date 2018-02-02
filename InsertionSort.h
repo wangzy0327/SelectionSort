@@ -14,8 +14,12 @@ void insertionSort(T arr[],int n){
         //判断插入位置
         //循环条件:当当前位置比前面有序序列 当前位置小的话 循环继续
         //而对比选择排序来说,选择排序每次需要遍历到最后一个元素  理论上来说 插入排序更快
-        for(int j = i;j > 0 && arr[j] < arr[j - 1];j--)
-            swap(arr[j],arr[j - 1]);
+        //插入排序需要优化 swap交换需要3次赋值
+        T e = arr[i];
+        int j;  //j保存元素e应该插入的位置
+        for(j = i;j > 0 && arr[j - 1] > e;j--)
+            arr[j] = arr[j - 1];
+        arr[j] = e;
     }
 }
 
