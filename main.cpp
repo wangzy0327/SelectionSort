@@ -41,13 +41,13 @@ int main() {
 //    int *arr = SortTestHelper::generateRandomArray(n,0,n);
 //    int *arr2 = SortTestHelper::copyIntArray(arr,n);
     //只有两百个元素不在他本来应该在的位置
-    int *arr = SortTestHelper::generateNearlyOrderedArray(n,700);
-    int *arr2 = SortTestHelper::copyIntArray(arr,n);
+    int *arr = SortTestHelper::generateNearlyOrderedArray(n, 700);
+    int *arr2 = SortTestHelper::copyIntArray(arr, n);
 //    selectionSort(arr,n);
     //将打印提炼为一个函数
 //    SortTestHelper::printArray(arr,n);
-    SortTestHelper::testSort("Selection Sort",selectionSort,arr,n);
-    SortTestHelper::testSort("Insertion Sort",insertionSort,arr2,n);
+    SortTestHelper::testSort("Selection Sort", selectionSort, arr, n);
+    SortTestHelper::testSort("Insertion Sort", insertionSort, arr2, n);
 
     //释放内存
     delete[] arr;
