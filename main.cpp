@@ -5,6 +5,7 @@
 #include "SelectionSort.h"
 #include "InsertionSort.h"
 #include "Student.h"
+#include "BubbleSort.h"
 
 using namespace std;
 
@@ -43,16 +44,18 @@ int main() {
     //只有两百个元素不在他本来应该在的位置
     int *arr = SortTestHelper::generateNearlyOrderedArray(n, 700);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
+    int *arr3 = SortTestHelper::copyIntArray(arr, n);
 //    selectionSort(arr,n);
     //将打印提炼为一个函数
 //    SortTestHelper::printArray(arr,n);
     SortTestHelper::testSort("Selection Sort", selectionSort, arr, n);
     SortTestHelper::testSort("Insertion Sort", insertionSort, arr2, n);
+    SortTestHelper::testSort("Bubble Sort", bubbleSort, arr3, n);
 
     //释放内存
     delete[] arr;
-
     delete[] arr2;
+    delete[] arr3;
 
     return 0;
 }
