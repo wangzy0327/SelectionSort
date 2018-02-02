@@ -50,6 +50,14 @@ namespace SortTestHelper{
         cout<<sortName<<" : "<<double(endTime - startTime)/CLOCKS_PER_SEC<<"s"<<endl;
         return ;
     }
+
+    //拷贝整型数组
+    int* copyIntArray(int a[],int n){
+        int * arr = new int[n];
+        //std中的copy
+        copy(a,a+n,arr);
+        return arr;
+    }
 }
 
 #endif //SELECTIONSORT_SORTTESTHELPER_H

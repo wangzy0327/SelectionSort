@@ -1,7 +1,14 @@
 git #.gitignore忽略的文件
 
+#c++
+*.o
+*.exe
 
+#java
 *.class
+
+#cmake-build-debug
+cmake-build-debug/
 
 #package file
 *.war
