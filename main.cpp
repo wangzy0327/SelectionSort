@@ -49,6 +49,7 @@ int main() {
     int *arr3 = SortTestHelper::copyIntArray(arr, n);
     int *arr4 = SortTestHelper::copyIntArray(arr, n);
     int *arr5 = SortTestHelper::copyIntArray(arr, n);
+    int *arr6 = SortTestHelper::copyIntArray(arr, n);
 //    selectionSort(arr,n);
     //将打印提炼为一个函数
 //    SortTestHelper::printArray(arr,n);
@@ -56,7 +57,8 @@ int main() {
     SortTestHelper::testSort("Insertion Sort", insertionSort, arr2, n);
     SortTestHelper::testSort("Merge Sort from Up to Bottom", mergeSortUB, arr3, n);
     SortTestHelper::testSort("Merge Sort from Bottom to Up", mergeSortBU, arr4, n);
-    SortTestHelper::testSort("Bubble Sort", bubbleSort, arr5, n);
+    SortTestHelper::testSort("Quick Sort", quickSort, arr5, n);
+    SortTestHelper::testSort("Bubble Sort", bubbleSort, arr6, n);
 
     //释放内存
     delete[] arr;
@@ -64,6 +66,7 @@ int main() {
     delete[] arr3;
     delete[] arr4;
     delete[] arr5;
+    delete[] arr6;
 
     return 0;
 }
