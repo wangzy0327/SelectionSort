@@ -1,6 +1,8 @@
 git #.gitignore忽略的文件
 
 #c++
+*.gch
+*.out
 *.o
 *.exe
 
