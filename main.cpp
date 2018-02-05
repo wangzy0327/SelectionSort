@@ -43,17 +43,19 @@ int main() {
 //    int *arr = SortTestHelper::generateRandomArray(n,0,n);
 //    int *arr2 = So rtTestHelper::copyIntArray(arr,n);
     //只有两百个元素不在他本来应该在的位置
-    int *arr = SortTestHelper::generateNearlyOrderedArray(n, 10);
+    int *arr = SortTestHelper::generateNearlyOrderedArray(n, 1000);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
     int *arr3 = SortTestHelper::copyIntArray(arr, n);
     int *arr4 = SortTestHelper::copyIntArray(arr, n);
+    int *arr5 = SortTestHelper::copyIntArray(arr, n);
 //    selectionSort(arr,n);
     //将打印提炼为一个函数
 //    SortTestHelper::printArray(arr,n);
     SortTestHelper::testSort("Selection Sort", selectionSort, arr, n);
     SortTestHelper::testSort("Insertion Sort", insertionSort, arr2, n);
-    SortTestHelper::testSort("Merge Sort", mergeSort, arr3, n);
-    SortTestHelper::testSort("Bubble Sort", bubbleSort, arr4, n);
+    SortTestHelper::testSort("Merge Sort from Up to Bottom", mergeSortUB, arr3, n);
+    SortTestHelper::testSort("Merge Sort from Bottom to Up", mergeSortUB, arr4, n);
+    SortTestHelper::testSort("Bubble Sort", bubbleSort, arr5, n);
 
     //释放内存
     delete[] arr;
