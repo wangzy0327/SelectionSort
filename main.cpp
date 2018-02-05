@@ -7,7 +7,6 @@
 #include "Student.h"
 #include "BubbleSort.h"
 #include "MergeSort.h"
-#include "QuickSort.h"
 
 using namespace std;
 
