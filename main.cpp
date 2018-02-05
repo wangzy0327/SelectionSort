@@ -7,6 +7,7 @@
 #include "Student.h"
 #include "BubbleSort.h"
 #include "MergeSort.h"
+
 using namespace std;
 
 
@@ -40,9 +41,9 @@ using namespace std;
 int main() {
     int n = 50000;
 //    int *arr = SortTestHelper::generateRandomArray(n,0,n);
-//    int *arr2 = SortTestHelper::copyIntArray(arr,n);
+//    int *arr2 = So rtTestHelper::copyIntArray(arr,n);
     //只有两百个元素不在他本来应该在的位置
-    int *arr = SortTestHelper::generateNearlyOrderedArray(n, 700);
+    int *arr = SortTestHelper::generateNearlyOrderedArray(n, 10);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
     int *arr3 = SortTestHelper::copyIntArray(arr, n);
     int *arr4 = SortTestHelper::copyIntArray(arr, n);
